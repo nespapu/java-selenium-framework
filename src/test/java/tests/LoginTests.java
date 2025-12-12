@@ -4,6 +4,7 @@ import framework.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import pages.InventoryPage;
 import pages.LoginPage;
 
 public final class LoginTests extends BaseTest {
@@ -12,6 +13,10 @@ public final class LoginTests extends BaseTest {
     void validLogin_shouldReachInventory() {
         LoginPage login = new LoginPage(driver).open(config.getProperty("baseUrl"));
         login.login("standard_user", "secret_sauce");
+
+        InventoryPage inventory = new InventoryPage(driver);
+        Assertions.assertTrue(inventory.isLoaded(),
+            "Inventory page should be loaded after valid login");
     }
 
     @Test
