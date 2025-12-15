@@ -1,3 +1,5 @@
+[![CI](../../actions/workflows/ci.yaml/badge.svg)](../../actions/workflows/ci.yaml)
+
 # java-selenium-framework
 
 Mini UI automation framework built with **Java 17**, **Selenium 4**, and **JUnit 5**, following the **Page Object Model (POM)**.
