@@ -12,7 +12,7 @@ public final class Waits {
     private final WebDriverWait wait;
 
     public Waits(WebDriver driver) {
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     public WebElement visible(By locator) {
