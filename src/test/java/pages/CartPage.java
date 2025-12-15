@@ -9,7 +9,7 @@ public final class CartPage {
     private final WebDriver driver;
     private final Waits waits;
 
-    private final By cartList = By.cssSelector(".cart_list");
+    private final By cartContents = By.id("cart_contents_container");
     private final By cartItemNames = By.cssSelector(".cart_item .inventory_item_name");
 
     public CartPage(WebDriver driver) {
@@ -18,7 +18,7 @@ public final class CartPage {
     }
 
     public boolean isLoaded() {
-        waits.visible(cartList);
+        waits.visible(cartContents);
         return true;
     }
 

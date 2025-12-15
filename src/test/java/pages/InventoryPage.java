@@ -35,5 +35,6 @@ public final class InventoryPage {
 
     public void goToCart() {
         waits.click(cartLink);
+        waits.urlContains(driver, "cart");
     }
 }
