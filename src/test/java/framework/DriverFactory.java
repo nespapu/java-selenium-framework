@@ -18,6 +18,8 @@ public final class DriverFactory {
         }
         options.addArguments("--window-size=1400,900");
         options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 
         return new ChromeDriver(options);
     }
