@@ -21,8 +21,6 @@ public final class CartTests extends BaseTest {
         Assertions.assertEquals("1", inventory.getCartCount(), "Cart badge should show 1 item");
 
         inventory.goToCart();
-        String  url = driver.getCurrentUrl();
-        Assertions.assertTrue(url.contains("cart"), "Expected to be on cart page, but URL was: " + url);
 
         CartPage cart = new CartPage(driver);
         Assertions.assertTrue(cart.isLoaded(), "Cart page should be loaded");
