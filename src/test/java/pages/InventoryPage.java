@@ -10,6 +10,7 @@ public final class InventoryPage {
     private final WebDriver driver;
     private final Waits waits;
 
+    private final By inventoryContainer = By.id("inventory_container");
     private final By addBackpackButton = By.id("add-to-cart-sauce-labs-backpack");
     private final By cartLink = By.cssSelector(".shopping_cart_link");
     private final By cartBadge = By.cssSelector(".shopping_cart_badge");
@@ -20,6 +21,7 @@ public final class InventoryPage {
     }
 
     public boolean isLoaded() {
+        waits.visible(inventoryContainer);
         return waits.urlContains(driver, "inventory");
     }
 

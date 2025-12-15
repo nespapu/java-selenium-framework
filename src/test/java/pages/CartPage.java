@@ -9,6 +9,7 @@ public final class CartPage {
     private final WebDriver driver;
     private final Waits waits;
 
+    private final By cartList = By.cssSelector(".cart_list");
     private final By cartItemNames = By.cssSelector(".cart_item .inventory_item_name");
 
     public CartPage(WebDriver driver) {
@@ -17,7 +18,8 @@ public final class CartPage {
     }
 
     public boolean isLoaded() {
-        return waits.urlContains(driver, "cart");
+        waits.visible(cartList);
+        return true;
     }
 
     public boolean containsItem(String itemName) {
